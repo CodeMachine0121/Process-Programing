@@ -158,12 +158,14 @@ int main(int argc, char *argv[]){
 		goto free_logbuf;
 	}
 
-	struct timespec start;
-	clock_gettime(CLOCK_MONOTONIC, &start); 
+	
    
 //  存放最後花費時間
 	
 	struct _process* process = set_ID_func_MAP(nproc);
+	struct timespec start;
+	clock_gettime(CLOCK_MONOTONIC, &start); 
+	
 	int i, ncreated;
 	for(i=0,ncreated=0; i< nproc; i++, ncreated++){
 		
